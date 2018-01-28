@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".view.base.AccountActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+        
+        <FrameLayout
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/account_image"
+                android:background="#000"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/account_nickname"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="Aleksandr\nYukhnevich"
+                android:layout_marginLeft="58dp"
+                android:gravity="center_vertical"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp" />
+
+            <ImageView
+                android:src="@drawable/ic_points"
+                android:layout_gravity="right|center_vertical"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:id="@+id/account_points"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:text="100"
+                android:textSize="22sp"
+                android:gravity="center_vertical"
+                android:layout_marginRight="32dp"
+                android:layout_gravity="right|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp" />
+        </FrameLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:id="@+id/account_info_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.CardView
+                android:layout_gravity="center"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="6dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:text="Spent this month: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/account_money_spent"
+                        android:gravity="center_vertical"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorAccent"
+                        android:text="125p 50k"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawableLeft="@drawable/ic_information"
+                    android:drawablePadding="4dp"
+                    android:text="Information"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_margin="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp" />
+
+                <ImageView
+                    android:id="@+id/account_information_expand"
+                    android:src="@drawable/ic_expand_more"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <FrameLayout
+                        android:id="@+id/account_surname"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#000"
+                            android:text="Surname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="Yukhnevich"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/account_name"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#000"
+                            android:text="Name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="Aleksandr"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:visibility="gone"
+                        android:id="@+id/account_father"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#000"
+                            android:text="Otchestvo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="Igorevich"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:visibility="gone"
+                        android:id="@+id/account_email"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#000"
+                            android:text="Email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="psiali@gm.com"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/account_phone"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#000"
+                            android:text="Phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="+375298661211"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:visibility="gone"
+                        android:id="@+id/account_gender"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#000"
+                            android:text="Gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="Male"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:visibility="gone"
+                        android:id="@+id/account_birth"
+                        android:padding="4dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="#000"
+                            android:text="Birth date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="21.04.1997"
+                            android:layout_gravity="right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawableLeft="@drawable/ic_address_place"
+                    android:drawablePadding="4dp"
+                    android:text="Addresses"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_margin="9dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp" />
+                <ImageView
+                    android:id="@+id/account_add_address_button"
+                    android:src="@drawable/ic_add_color"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/account_addresses_container"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/template_account_address"/>
+                    <include layout="@layout/template_account_address"/>
+                    <include layout="@layout/template_account_address"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawableLeft="@drawable/ic_credit_card"
+                    android:drawablePadding="4dp"
+                    android:text="Cards"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_margin="9dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp" />
+                <ImageView
+                    android:id="@+id/account_add_card_button"
+                    android:src="@drawable/ic_add_color"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/account_cards_container"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/template_credit_card"/>
+                    <include layout="@layout/template_credit_card"/>
+                    <include layout="@layout/template_credit_card"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawableLeft="@drawable/ic_favorite_color"
+                    android:drawablePadding="4dp"
+                    android:text="Preferences"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center_vertical"
+                    android:layout_margin="9dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp" />
+
+                <RelativeLayout
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/category0_label"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Category0"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp" />
+                    <ImageView
+                        android:id="@+id/account_add_category0_button"
+                        android:layout_alignTop="@id/category0_label"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_add_color"
+                        android:layout_marginRight="4dp"
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:id="@+id/category0_container"
+                        android:layout_below="@id/category0_label"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_below="@id/category0_container"
+                        android:id="@+id/category1_label"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Category1"
+                        android:gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp" />
+                    <ImageView
+                        android:id="@+id/account_add_category1_button"
+                        android:layout_alignTop="@id/category1_label"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_add_color"
+                        android:layout_marginRight="4dp"
+                        android:layout_gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_below="@id/category1_label"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

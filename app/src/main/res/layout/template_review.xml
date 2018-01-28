@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.seemsGood.shara.view.custom.ReviewCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/review_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    app:cardCornerRadius="3dp">
+
+    <RelativeLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/reviewer_image"
+            android:src="@drawable/ic_user_placeholder"
+            android:layout_marginRight="4dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/reviewer_name"
+            android:text="Oleg Yukhnevich"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/reviewer_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@id/reviewer_image"
+            android:layout_below="@id/reviewer_name"
+            android:id="@+id/review_title"
+            android:text="Good very shop!"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+        <LinearLayout
+            android:layout_below="@id/review_title"
+            android:layout_toRightOf="@id/reviewer_image"
+            android:id="@+id/review_stars_container"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/ic_star_full"
+                android:layout_width="16dp"
+                android:layout_height="16dp" />
+            <ImageView
+                android:src="@drawable/ic_star_full"
+                android:layout_width="16dp"
+                android:layout_height="16dp" />
+            <ImageView
+                android:src="@drawable/ic_star_full"
+                android:layout_width="16dp"
+                android:layout_height="16dp" />
+            <ImageView
+                android:src="@drawable/ic_star_full"
+                android:layout_width="16dp"
+                android:layout_height="16dp" />
+            <ImageView
+                android:src="@drawable/ic_star_full"
+                android:layout_width="16dp"
+                android:layout_height="16dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/review_like_button"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_like_no"
+            android:layout_width="28dp"
+            android:layout_height="28dp" />
+
+        <TextView
+            android:layout_marginTop="11dp"
+            android:textSize="12sp"
+            android:id="@+id/review_date"
+            android:text="22.06.2017"
+            android:textStyle="italic|bold"
+            android:layout_toLeftOf="@id/review_like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textSize="12sp"
+            android:id="@+id/review_address"
+            android:text="Y kolasa 28"
+            android:textStyle="italic|bold"
+            android:layout_below="@id/review_date"
+            android:layout_toLeftOf="@id/review_like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:layout_marginTop="2dp"
+            android:layout_below="@id/reviewer_image"
+            android:id="@+id/review_description"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet elit in est maximus, in volutpat neque eleifend. Cras ac eleifend velit. Aliquam pellentesque rhoncus feugiat. Etiam lacinia, neque eget tempor dignissim, purus leo bibendum "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/review_pm_container"
+            android:layout_marginTop="6dp"
+            android:layout_below="@id/review_description"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginRight="6dp"
+                android:src="@drawable/ic_review_pluses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/review_pluses"
+                android:gravity="center_vertical"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+                android:textSize="12dp"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginRight="4dp"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/ic_review_minuses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/review_minuses"
+                android:gravity="center_vertical"
+                android:text="Nullam aliquet elit in est maximus, in volutpat neque eleifend."
+                android:textSize="12dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_marginTop="6dp"
+            android:id="@+id/reply_expand_button"
+            android:layout_below="@id/review_pm_container"
+            android:src="@drawable/ic_reply_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/review_reply_head"
+            android:textStyle="bold"
+            android:text="Reply on 27.07.2017"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_alignBottom="@id/reply_expand_button"
+            android:layout_toRightOf="@id/reply_expand_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/review_reply_text"
+            android:visibility="gone"
+            android:layout_alignLeft="@id/review_reply_head"
+            android:layout_below="@id/reply_expand_button"
+            android:text="Some more more more text from developer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</org.seemsGood.shara.view.custom.ReviewCardView>

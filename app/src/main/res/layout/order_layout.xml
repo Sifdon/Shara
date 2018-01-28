@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:visibility="gone"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="46dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginBottom="8dp"
+    android:id="@+id/order_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:textStyle="italic|bold"
+        android:id="@+id/order_corrected_price"
+        android:textColor="@color/colorAccent"
+        android:text="1920p"
+        android:textSize="28sp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="16sp"
+        android:layout_toLeftOf="@id/order_corrected_price"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="14dp"
+        android:text="Corrected price:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_above="@id/order_corrected_price"
+        android:orientation="horizontal"
+        android:id="@+id/points_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <SeekBar
+            android:id="@+id/order_points_seek_bar"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/order_points_kind"
+            android:layout_marginLeft="6dp"
+            android:textColor="@color/colorAccent"
+            android:text="Receive"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="right|center_vertical"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/order_points"
+            android:layout_marginLeft="6dp"
+            android:textColor="@color/colorAccent"
+            android:text="20"
+            android:textSize="24sp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/points_head"
+            android:textSize="20sp"
+            android:layout_marginLeft="6dp"
+            android:text="points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/order_address_head"
+        android:layout_marginTop="4dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:text="Choose address:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/address_add_button"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/order_address_head"
+        android:src="@drawable/ic_add_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/order_time_date_container"
+        android:layout_above="@id/points_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="18sp"
+            android:text="Time:"
+            android:layout_marginRight="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/time_chooser"
+            android:textSize="18sp"
+            android:text="00:00"
+            android:layout_marginRight="40dp"
+            android:gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="18sp"
+            android:text="Date:"
+            android:layout_marginRight="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/date_chooser"
+            android:textSize="18sp"
+            android:text="23.08.2017"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/order_time_date_head"
+        android:layout_above="@id/order_time_date_container"
+        android:layout_marginTop="10dp"
+        android:text="Choose date and time:"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/order_address_container"
+        android:layout_below="@id/order_address_head"
+        android:layout_above="@id/order_time_date_head"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false">
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="4dp"
+                    android:text="Company"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/chooser_shop"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="4dp"
+                    android:text="Your"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content" />
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/chooser_user"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </ScrollView>
+            <include layout="@layout/template_address_card_user"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

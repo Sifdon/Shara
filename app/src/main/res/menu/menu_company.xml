@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_favorite"
+        android:title="@string/favorite"
+        android:icon="@drawable/ic_favorite_no"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_cart"
+        android:title="@string/cart"
+        android:icon="@drawable/ic_cart"
+        app:actionLayout="@layout/cart_action_view"
+        app:showAsAction="always" />
+
+</menu>

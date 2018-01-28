@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name" translatable="false">Shara</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="firebase_functions" translatable="false">https://us-central1-beta-shopping-assistant.cloudfunctions.net/</string>
+    <string name="google_maps_key" translatable="false">AIzaSyCCQfQwJgEB2bUzSOD3bSk4Zu2qdodexOE</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="motto">watching for you</string>
+    <string name="logotype_description">logotype</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_in_button">Sign In</string>
+    <string name="register_button">Register</string>
+    <string name="back_button">Back</string>
+    <string name="finish_button">Finish</string>
+    <string name="gender_text">Gender</string>
+    <string name="date_button">Date</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="sign_in_title">Hello!</string>
+    <string name="todo">TODO</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="father_name">Father Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="first_name">First Name</string>
+    <string name="registration_title">Give information:</string>
+    <string name="continue_button">Continue</string>
+    <string name="password_repeat_hint">Repeat password</string>
+    <string name="skip_button">Skip</string>
+    <string name="code_hint">Code</string>
+    <string name="phone_hint">Phone</string>
+    <string name="phone_placeholder">+375(__)___-__-__</string>
+    <string name="companies">Companies</string>
+    <string name="cart">Cart</string>
+    <string name="notifications">Notifications</string>
+    <string name="sales">Sales</string>
+    <string name="favorites">Favorites</string>
+    <string name="history">History</string>
+    <string name="account">Account</string>
+    <string name="settings">Settings</string>
+    <string name="favorite">Favorite</string>
+    <string name="add">Add</string>
+    <string name="pay">Pay</string>
+
+</resources>

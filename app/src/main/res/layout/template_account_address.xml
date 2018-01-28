@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/address_name"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:layout_margin="4dp"
+        android:textColor="#000"
+        android:text="Homeassd"
+        android:textStyle="italic"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/address_place"
+        android:layout_gravity="center_vertical"
+        android:gravity="left"
+        android:layout_marginLeft="116dp"
+        android:text="Kolasa 28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/address_remove_button"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_remove_color"
+        android:layout_margin="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</FrameLayout>

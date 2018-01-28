@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.seemsGood.shara.view.custom.ShopAddressLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/address_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    tools:ignore="RtlHardcoded">
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/address_time_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="4dp"
+        android:drawablePadding="3dp"
+        android:drawableRight="@drawable/ic_address_time_to"
+        android:gravity="center"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/address_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="6dp"
+        android:drawableLeft="@drawable/ic_address_place"
+        android:drawablePadding="3dp"
+        android:gravity="center_vertical|left"
+        android:textSize="15sp" />
+    <TextView
+        android:id="@+id/address_work_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address_place"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:drawablePadding="3dp"
+        android:drawableLeft="@drawable/ic_address_work_time"
+        android:gravity="center"
+        android:textSize="15sp" />
+    <LinearLayout
+        android:id="@+id/address_tags_container"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/address_place"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_margin="2dp"
+            android:src="@drawable/ic_cart"
+            android:background="@color/colorAccent"
+            android:padding="2dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:layout_margin="2dp"
+            android:src="@drawable/ic_date"
+            android:background="@color/colorAccent"
+            android:padding="2dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/address_rating_container"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/address_place"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="6dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/address_rating_count"
+            android:textSize="12sp"
+            android:gravity="bottom"
+            android:layout_marginRight="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/address_rating_points"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:drawableRight="@drawable/ic_star_full"
+            android:drawablePadding="3dp"
+            android:layout_marginRight="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</org.seemsGood.shara.view.custom.ShopAddressLayout>

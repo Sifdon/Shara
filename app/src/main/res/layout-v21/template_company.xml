@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.seemsGood.shara.view.custom.CompanyCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/company_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    card_view:cardCornerRadius="3dp">
+
+    <RelativeLayout
+        android:paddingBottom="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:transitionName="company image"
+            android:id="@+id/company_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/shop_placeholder"/>
+
+        <ImageView
+            android:id="@+id/company_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/company_rating_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/company_placeholder"
+            android:layout_margin="6dp"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/shop_rating_container"/>
+
+        <TextView
+            android:id="@+id/company_rating"
+            android:layout_width="58dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/company_rating_container"
+            android:layout_alignEnd="@id/company_rating_container"
+            android:layout_marginEnd="6dp"
+            android:drawableStart="@drawable/ic_star_full"
+            android:gravity="center"
+            android:textColor="#424242"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/company_placeholder"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:drawableStart="@drawable/shop_time_open"
+            android:drawablePadding="2dp"
+            android:gravity="center"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</org.seemsGood.shara.view.custom.CompanyCardView>

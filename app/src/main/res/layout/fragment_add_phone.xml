@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/phone_input_layout"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <org.seemsGood.shara.view.custom.PhoneEditText
+            android:text="@string/phone_placeholder"
+            android:id="@+id/phone"
+            android:hint="@string/phone_hint"
+            android:inputType="phone"
+            android:digits="0123456789"
+            android:focusableInTouchMode="true"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:visibility="invisible"
+        android:id="@+id/code_input_layout"
+        android:layout_below="@id/phone_input_layout"
+        android:layout_alignStart="@id/phone_input_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/code"
+            android:hint="@string/code_hint"
+            android:maxLength="6"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:focusableInTouchMode="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_alignBottom="@id/code_input_layout"
+        android:layout_alignEnd="@id/phone_input_layout"
+        android:text="@string/continue_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/PrimaryButton"
+        style="@style/MaterialButton" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_bar"
+        android:layout_margin="12dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+</RelativeLayout>

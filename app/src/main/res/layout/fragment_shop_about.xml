@@ -1,0 +1,265 @@
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shop_about_scroll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:id="@+id/shop_about_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:visibility="visible"
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/description_head"
+                android:text="Info"
+                android:textSize="18sp"
+                android:drawableLeft="@drawable/ic_description"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_toRightOf="@id/description_head"
+                android:id="@+id/max_points_percentage"
+                android:textSize="18sp"
+                android:text="20%"
+                android:drawableLeft="@drawable/ic_max_discount"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:layout_marginTop="14dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/main_rating_count"
+                android:textSize="12sp"
+                android:text="(100)"
+                android:gravity="center"
+                android:drawablePadding="3dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_toLeftOf="@id/main_rating_count"
+                android:id="@+id/main_rating"
+                android:textSize="18sp"
+                android:text="4.5"
+                android:gravity="center"
+                android:drawableLeft="@drawable/ic_star_full"
+                android:drawablePadding="3dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Asdasdashkdhahsdasdhasdasdasdasdasdasdasdhasdsadasdasgdhgasdasashdksadhksakdkja..."
+                android:id="@+id/main_description"
+                android:layout_below="@id/description_head"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/contacts"
+                android:layout_below="@id/main_description"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/contacts_phones"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:drawableLeft="@drawable/ic_contacts_phone"
+                        android:drawablePadding="3dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Phones"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:id="@+id/phones_container"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/contacts_websites"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:drawableLeft="@drawable/ic_contacts_web"
+                        android:drawablePadding="3dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Websites"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:id="@+id/websites_container"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:visibility="gone"
+                android:id="@+id/contacts_emails"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:drawableLeft="@drawable/ic_contacts_email"
+                        android:drawablePadding="3dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="4dp"
+                        android:text="Emails"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:id="@+id/emails_container"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/places"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="1dp">
+        <TextView
+            android:text="Places"
+            android:drawableLeft="@drawable/ic_map"
+            android:drawablePadding="3dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/map_button"
+            android:text="Map"
+            android:background="#eee"
+            android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_width="50dp"
+            android:layout_height="24dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="4dp"
+            android:id="@+id/places_container"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/map_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/sales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="1dp">
+        <TextView
+            android:layout_margin="8dp"
+            android:drawableLeft="@drawable/ic_sales"
+            android:drawablePadding="3dp"
+            android:text="Sales:"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/shop_sales_recycler"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+</android.support.v4.widget.NestedScrollView>
